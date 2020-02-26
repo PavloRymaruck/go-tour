@@ -31,7 +31,7 @@ func mainPage(w http.ResponseWriter, r *http.Request)  {
 	// user := User{"Pavlo" , "Just"}
 	// js, _ := json.Marshal(user)
 
-	tmpl, err := template.ParseFiles("GitHub/go-tour/go-tour/index.html")
+	tmpl, err := template.ParseFiles("go-tour/index.html")
 	if err != nil {
 		http.Error(w, err.Error(), 400)
 		return
