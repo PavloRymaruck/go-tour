@@ -24,10 +24,10 @@ type User struct {
 }
 
 func mainPage(w http.ResponseWriter, r *http.Request)  {
-	 user := User{"Pavlo"}
-	 js, _ := json.Marshal(user)
+	 user := User{"Pavlo" , "Just"}
+	// js, _ := json.Marshal(user)
 
-	tmpl, err := template.ParseFiles("index.html")
+	tmpl, err := template.ParseFiles("GitHub/go-tour/go-tour/index.html")
 	if err != nil {
 		http.Error(w, err.Error(), 400)
 		return
