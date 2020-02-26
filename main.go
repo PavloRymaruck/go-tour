@@ -8,7 +8,6 @@ import (
 )
 
 func main() {
-	fmt.Println("Listening on port :9999")
 	port:=":9999"
   err:=	http.ListenAndServe(port, nil)
 	if err != nil{
@@ -25,7 +24,7 @@ type User struct {
 }
 
 func mainPage(w http.ResponseWriter, r *http.Request)  {
-	// user := User{"Pavlo"}
+	 user := User{"Pavlo"}
 	// js, _ := json.Mars(user)
 
 	tmpl, err := template.ParseFiles("index.html")
