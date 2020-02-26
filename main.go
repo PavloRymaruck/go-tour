@@ -28,7 +28,7 @@ type User struct {
 }
 
 func mainPage(w http.ResponseWriter, r *http.Request)  {
-	 user := User{"Pavlo" , "Just"}
+	// user := User{"Pavlo" , "Just"}
 	// js, _ := json.Marshal(user)
 
 	tmpl, err := template.ParseFiles("GitHub/go-tour/go-tour/index.html")
