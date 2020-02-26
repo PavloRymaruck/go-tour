@@ -21,8 +21,8 @@ type User struct {
 }
 
 func mainPage(w http.ResponseWriter, r *http.Request)  {
-	// user := User{"Danylo"}
-	// js, _ := json.Marshal(user)
+	// user := User{"Pavlo"}
+	// js, _ := json.Mars(user)
 
 	tmpl, err := template.ParseFiles("index.html")
 	if err != nil {
