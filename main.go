@@ -8,12 +8,16 @@ import (
 )
 
 func main() {
+
+	http.HandleFunc("/", mainPage)
+
 	port:=":9999"
+	pointln("Server listen on port:",port)
   err:=	http.ListenAndServe(port, nil)
 	if err != nil{
 		log.Fatal("ListenAndServe", err)
 	}
-	http.HandleFunc("/", mainPage)
+
 
 }
 
