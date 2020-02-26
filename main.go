@@ -9,7 +9,11 @@ import (
 
 func main() {
 	fmt.Println("Listening on port :9999")
-	http.ListenAndServe(":9999", nil)
+	port:=":9999"
+  err:=	http.ListenAndServe(port, nil)
+	if err != nil{
+		log.Fatal("ListenAndServe", err)
+	}
 	http.HandleFunc("/", mainPage)
 
 }
